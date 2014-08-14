@@ -33,6 +33,8 @@ Initialize client. Must be called before any other methods.
 
 - `serverUrl : String`
 
+--
+
 #### `try(testId, versionIds, callback)`
 
 Participate in specific test by receiving a designated version.
@@ -42,7 +44,9 @@ Participate in specific test by receiving a designated version.
 - `testId : String`
 - `versionIds : String[]`
 - `callback : Function` - called with designated `versionId : String`.
- 
+
+--
+
 #### `win(testId)`
 
 Register conversion in specific test.
