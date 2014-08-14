@@ -7,18 +7,18 @@ Usage
 -----
 
 ```js
-var cta = document.getElementById('cta');
+var buyButton = document.getElementById('buyButton');
 
 BayesianBandit.init('http://bayesianbandit.example.org/t/');
 
-BayesianBandit.try('cta', ['red', 'green', 'blue'], function (versionId) {
-  cta.classList.add(versionId);
+BayesianBandit.try('buy-button-color', ['red', 'green', 'blue'], function (versionId) {
+  buyButton.classList.add(versionId);
 });
 
-cta.addEventListener('click', function (event) {
+buyButton.addEventListener('click', function (event) {
   event.preventDefault();
 
-  BayesianBandit.win('cta');
+  BayesianBandit.win('buy-button-color');
 });
 ```
 
