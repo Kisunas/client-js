@@ -34,6 +34,12 @@
     this._write();
   };
 
+  Storage.prototype.clear = function () {
+    delete this._store;
+
+    this._write();
+  };
+
   Storage.prototype._read = function () {
     var data = global.localStorage.getItem(this.name);
 
@@ -41,7 +47,11 @@
   };
 
   Storage.prototype._write = function () {
-    global.localStorage.setItem(this.name, JSON.stringify(this._store));
+    if (this._store) {
+      global.localStorage.setItem(this.name, JSON.stringify(this._store));
+    } else {
+      global.localStorage.removeItem(this.name);
+    }
   };
 
 
@@ -101,6 +111,18 @@
         globalServerUrl = serverUrl;
 
         this._storage = new Storage();
+      },
+
+      /**
+       * Resets client by unsetting server URL and clearing storage.
+       */
+      reset: function () {
+        globalServerUrl = undefined;
+
+        if (this._storage) {
+          this._storage.clear();
+          delete this._storage;
+        }
       },
 
       /**

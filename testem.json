@@ -1,0 +1,14 @@
+{
+  "framework": "mocha+chai",
+  "src_files": [
+    "node_modules/sinon/pkg/sinon.js",
+    "src/*.js",
+    "test/*.spec.js"
+  ],
+  "launch_in_dev": [
+    "PhantomJS"
+  ],
+  "launch_in_ci": [
+    "PhantomJS"
+  ]
+}

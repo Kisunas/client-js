@@ -3,6 +3,7 @@ Bayesian Bandit JavaScript Client
 
 JavaScript client for Bayesian Bandit testing server.
 
+
 Usage
 -----
 
@@ -21,6 +22,7 @@ buyButton.addEventListener('click', function (event) {
   BayesianBandit.win('buy-button-color');
 });
 ```
+
 
 API
 ---
@@ -54,3 +56,10 @@ Register conversion in specific test.
 **Params:**
 
 - `testId : String`
+
+
+Testing
+-------
+
+1. Install dependencies: `npm install`;
+2. Run test suite: `npm test`.
