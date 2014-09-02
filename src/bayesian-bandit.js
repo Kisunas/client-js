@@ -2,14 +2,15 @@
  * JavaScript client for Bayesian Bandit testing server.
  *
  * @name Bayesian Bandit JavaScript Client
- * @version 0.0.1
+ * @version 0.1.0
+ * @license [MIT]{@link http://opensource.org/licenses/mit-license.php}
  */
 
 ;(function (global, undefined) {
   'use strict';
 
   var NAME = 'BayesianBandit',
-      VERSION = '0.0.1';
+      VERSION = '0.1.0';
 
 
   function Storage() {

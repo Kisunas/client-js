@@ -1,7 +1,7 @@
 {
   "name": "bayesianbandit-js",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.1.0",
+  "main": "src/bayesian-bandit.js",
   "scripts": {
     "test": "./node_modules/.bin/testem"
   },
